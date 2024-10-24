@@ -107,7 +107,7 @@ The **Air Quality Index (AQI) Scraper API** is a Flask-based web service designe
 ### Running the Flask Application
 1. **Start the Flask Server**
    ```bash
-   python app.py
+   python scraper-app.py
    ```
    You should see output similar to:
    ```markdown
