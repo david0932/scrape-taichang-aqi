@@ -111,8 +111,8 @@ The **Air Quality Index (AQI) Scraper API** is a Flask-based web service designe
    ```
    You should see output similar to:
    ```markdown
-    * Serving Flask app 'app' (lazy loading)
-     * Environment: production
+   * Serving Flask app 'app' (lazy loading)
+   * Environment: production
    WARNING: Do not use the development server in a production environment.
    Use a production WSGI server instead.
      * Debug mode: on
