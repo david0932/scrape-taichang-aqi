@@ -148,3 +148,15 @@ GET /scrape
 git checkout -b feature/YourFeature
 ```
 3. **Commit Your Changes**
+```bash
+git commit -m "Add some feature"
+```
+4. **Push to the Branch**
+```bash
+git push origin feature/YourFeature
+```
+5. **Open a Pull Request**
+## License
+This project is licensed under the MIT License.
+## Contact
+For any questions or suggestions, please open an issue.
