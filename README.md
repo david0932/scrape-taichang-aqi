@@ -129,6 +129,71 @@ The **Air Quality Index (AQI) Scraper API** is a Flask-based web service designe
 GET /scrape
 ```
 ### Query Parameters
+| Parameter | Type | Description | Default |
+| --------- | ---- | ----------- | ------- |
+| url |	string | The target URL to scrape. | https://taqm.epb.taichung.gov.tw/TQAMNEWAQITABLE.ASPX |
+| table_id | string	| The HTML id attribute of the target table. | GridView1 |
+| num_header_rows |	int | The number of header rows in the table to parse. | 2 |
+### Example Request
+### Basic Request:
+```bash
+curl http://localhost:5000/scrape
+````
+### Request with Query Parameters:
+```bash
+curl "http://localhost:5000/scrape?url=https://taqm.epb.taichung.gov.tw/TQAMNEWAQITABLE.ASPX&table_id=GridView1&num_header_rows=2"
+```
+### Example Response
+### Successful Response:
+```json
+{
+    "publish_time": "2024年10月24日 21時",
+    "data": [
+        {
+            "測站名稱": "測站A",
+            "對健康影響等級": "良好",
+            "AQI指標值": 50,
+            "指標污染物": "PM2.5",
+            "二氧化硫(SO2)_小時濃度(ppb)": 5,
+            "二氧化硫(SO2)_8小時移動平均濃度(ppm)": 4.5,
+            "一氧化碳(CO)_小時濃度(ppb)": 0.8,
+            "一氧化碳(CO)_8小時移動平均濃度(ppb)": 0.7,
+            "臭氧(O3)_小時濃度(ppb)": 30,
+            "臭氧(O3)_移動平均濃度(μg/m3)": 28,
+            "二氧化氮(NO2)_小時濃度(ppb)": 15,
+            "二氧化氮(NO2)_移動平均濃度(μg/m3)": 14,
+            "懸浮微粒(PM10)_小時濃度(ppb)": 40,
+            "懸浮微粒(PM10)_移動平均濃度(μg/m3)": 38,
+            "細懸浮微粒(PM2.5)_小時濃度(ppb)": 25,
+            "細懸浮微粒(PM2.5)_移動平均濃度(μg/m3)": 24
+        },
+        {
+            "測站名稱": "測站B",
+            "對健康影響等級": "中等",
+            "AQI指標值": 75,
+            "指標污染物": "PM10",
+            "二氧化硫(SO2)_小時濃度(ppb)": 10,
+            "二氧化硫(SO2)_8小時移動平均濃度(ppm)": 9.5,
+            "一氧化碳(CO)_小時濃度(ppb)": 1.2,
+            "一氧化碳(CO)_8小時移動平均濃度(ppb)": 1.1,
+            "臭氧(O3)_小時濃度(ppb)": 35,
+            "臭氧(O3)_移動平均濃度(μg/m3)": 33,
+            "二氧化氮(NO2)_小時濃度(ppb)": 20,
+            "二氧化氮(NO2)_移動平均濃度(μg/m3)": 19,
+            "懸浮微粒(PM10)_小時濃度(ppb)": 50,
+            "懸浮微粒(PM10)_移動平均濃度(μg/m3)": 48,
+            "細懸浮微粒(PM2.5)_小時濃度(ppb)": 30,
+            "細懸浮微粒(PM2.5)_移動平均濃度(μg/m3)": 29
+        }
+        // ... more data rows
+    ]
+}
+```
+## Response Fields
+* publish_time: The timestamp when the AQI data was published.
+* data: An array of objects, each representing a row of AQI data with various pollutants and their measurements.
+### Error Handling
+The API provides meaningful error messages and appropriate HTTP status codes in case of failures:
 | HTTP Status Code | Description | Example Response |
 | ---------------- | ----------- | -----------------|
 |200 OK	| Successful request and data retrieval. |	See Example Response |
