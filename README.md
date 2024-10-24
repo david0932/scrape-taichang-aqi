@@ -105,7 +105,7 @@ The **Air Quality Index (AQI) Scraper API** is a Flask-based web service designe
    pip install flask requests beautifulsoup4 lxml
 ## Usage
 ### Running the Flask Application
-1. ** Start the Flask Server
+1. **Start the Flask Server**
    ```bash
    python app.py
    ```
@@ -121,7 +121,7 @@ The **Air Quality Index (AQI) Scraper API** is a Flask-based web service designe
      * Debugger is active!
      * Debugger PIN: XXX-XXX-XXX
    ```
-2. **Access the API
+2. **Access the API**
    The API will be accessible at http://localhost:5000/scrape.
 ## API Endpoint
 ### Endpoint URL
