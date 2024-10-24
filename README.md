@@ -129,5 +129,9 @@ The **Air Quality Index (AQI) Scraper API** is a Flask-based web service designe
 GET /scrape
 ```
 ### Query Parameters
-
+| HTTP Status Code | Description | Example Response |
+| ---------------- | ----------- | -----------------|
+|200 OK	| Successful request and data retrieval. |	See Example Response |
+|404 Not Found	| No data found in the table.	| {"message": "No data found."}
+|500 Internal Server Error	| An error occurred during processing. |	{"error": "No table found with id 'GridView1'"}|
    
