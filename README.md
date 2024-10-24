@@ -135,3 +135,16 @@ GET /scrape
 |404 Not Found	| No data found in the table.	| {"message": "No data found."}
 |500 Internal Server Error	| An error occurred during processing. |	{"error": "No table found with id 'GridView1'"}|
    
+## Technologies Used
+* Flask - Web framework for Python.
+* Requests - HTTP library for Python.
+* BeautifulSoup - HTML parsing library.
+* LXML - High-performance XML and HTML processing library.
+## Contributing
+### Contributions are welcome! Please follow these steps:
+1. **Fork the Repository**
+2. **Create a Feature Branch**
+```bash
+git checkout -b feature/YourFeature
+```
+3. **Commit Your Changes**
