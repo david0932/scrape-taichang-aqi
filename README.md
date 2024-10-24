@@ -42,3 +42,53 @@ curl http://localhost:5000/scrape
     ]
 }
 ```
+
+
+# Air Quality Index (AQI) Scraper API
+
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![Python](https://img.shields.io/badge/python-3.7%2B-blue.svg)
+
+## Table of Contents
+
+- [Introduction](#introduction)
+- [Features](#features)
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
+- [Usage](#usage)
+  - [Running the Flask Application](#running-the-flask-application)
+  - [API Endpoint](#api-endpoint)
+    - [Endpoint URL](#endpoint-url)
+    - [Query Parameters](#query-parameters)
+    - [Example Request](#example-request)
+    - [Example Response](#example-response)
+- [Error Handling](#error-handling)
+- [Technologies Used](#technologies-used)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
+
+## Introduction
+
+The **Air Quality Index (AQI) Scraper API** is a Flask-based web service designed to scrape and provide air quality data from the Taichung Environmental Protection Bureau's AQI table. It extracts both the AQI data table and the publication time, returning the information in a structured JSON format through a simple API endpoint.
+
+## Features
+
+- **Web Scraping**: Extracts AQI data from a specified webpage.
+- **Dynamic Header Parsing**: Handles complex table headers with multiple rows, `rowspan`, and `colspan`.
+- **Publication Time Extraction**: Retrieves the AQI data publication timestamp.
+- **API Access**: Provides a RESTful API endpoint to access the scraped data.
+- **Error Handling**: Returns meaningful error messages for failed requests or parsing issues.
+
+## Prerequisites
+
+- Python 3.7 or higher
+- `pip` package manager
+
+## Installation
+
+1. **Clone the Repository**
+
+   ```bash
+   git clone https://github.com/yourusername/aqi-scraper-api.git
+   cd aqi-scraper-api
