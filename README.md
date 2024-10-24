@@ -2,7 +2,7 @@
 資料來源: https://taqm.epb.taichung.gov.tw/TQAMNEWAQITABLE.ASPX
 
 ## 安裝必要的套件
-確保你已經安裝了所有必要的 Python 套件：
+安裝所有必要的 Python 套件：
 ```
 pip install flask requests beautifulsoup4 lxml
 ```
@@ -11,7 +11,7 @@ pip install flask requests beautifulsoup4 lxml
 python scraper-app.py
 ```
 ## 使用 API 端點
-你現在可以通過瀏覽器、curl 或任何 HTTP 客戶端（如 Postman）來訪問 /scrape 端點，並獲取包含發佈時間和表格資料的 JSON 回應。
+使用瀏覽器、curl 或任何 HTTP 客戶端（如 Postman）來訪問 /scrape 端點，並獲取包含發佈時間和表格資料的 JSON 回應。
 ```
 curl http://localhost:5000/scrape
 ```
