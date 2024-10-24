@@ -98,10 +98,36 @@ The **Air Quality Index (AQI) Scraper API** is a Flask-based web service designe
    source venv/bin/activate  # On Windows, use venv\Scripts\activate
 3. **Install Dependencies**
    ```bash
-   pip install -r requirements.txt 
-
+   pip install -r requirements.txt
+   ``` 
    If you don't have a requirements.txt, you can install the necessary packages directly:
-4. **
- 
+   ```bash
+   pip install flask requests beautifulsoup4 lxml
+## Usage
+### Running the Flask Application
+1. ** Start the Flask Server
+   ```bash
+   python app.py
+   ```
+   You should see output similar to:
+   ```markdown
+    * Serving Flask app 'app' (lazy loading)
+     * Environment: production
+   WARNING: Do not use the development server in a production environment.
+   Use a production WSGI server instead.
+     * Debug mode: on
+     * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+     * Restarting with stat
+     * Debugger is active!
+     * Debugger PIN: XXX-XXX-XXX
+   ```
+2. **Access the API
+   The API will be accessible at http://localhost:5000/scrape.
+## API Endpoint
+### Endpoint URL
+```bash
+GET /scrape
+```
+### Query Parameters
+
    
-5. 
