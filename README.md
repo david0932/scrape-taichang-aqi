@@ -93,9 +93,15 @@ The **Air Quality Index (AQI) Scraper API** is a Flask-based web service designe
    git clone https://github.com/yourusername/aqi-scraper-api.git
    cd aqi-scraper-api
 2. **Create a Virtual Environment (Optional but Recommended)**
-   ```python3 -m venv venv
+   ```bash
+   python3 -m venv venv
    source venv/bin/activate  # On Windows, use venv\Scripts\activate
 3. **Install Dependencies**
+   ```bash
+   pip install -r requirements.txt 
 
+   If you don't have a requirements.txt, you can install the necessary packages directly:
+4. **
+ 
    
-4. 
+5. 
