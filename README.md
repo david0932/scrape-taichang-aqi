@@ -185,7 +185,7 @@ curl "http://localhost:5000/scrape?url=https://taqm.epb.taichung.gov.tw/TQAMNEWA
             "細懸浮微粒(PM2.5)_小時濃度(ppb)": 30,
             "細懸浮微粒(PM2.5)_移動平均濃度(μg/m3)": 29
         }
-        // ... more data rows
+        ... more data rows
     ]
 }
 ```
